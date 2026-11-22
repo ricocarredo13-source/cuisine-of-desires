@@ -1,0 +1,15 @@
+{
+  "brand": "Cuisine of Desires",
+  "title": "Chocolate Chip Cookie to Satisfy Your Hunger",
+  "byline": "By Group 4 · November 23, 2026",
+  "tagline": "A gothic culinary response to desire, appetite, and the things that cannot be easily satisfied.",
+  "sections": [
+    {"id":"introduction","title":"Introduction","html":"<p><em>Some appetites are easier to satisfy than others.</em></p><p class=\"placeholder\">[Insert the group's introduction and opening hook here.]</p>"},
+    {"id":"ingredients","title":"Ingredients","html":"<p class=\"placeholder\">[Insert the approved cookie ingredients and the group's satirical descriptions here.]</p>"},
+    {"id":"procedure","title":"Procedure","html":"<p class=\"placeholder\">[Insert the cooking instructions and narrative commentary here.]</p>"},
+    {"id":"video-tutorial","title":"Video Tutorial","html":"<p class=\"placeholder\">[Embed your group's completed cooking video here.]</p>"},
+    {"id":"more-tips","title":"More Tips","html":"<p class=\"placeholder\">[Insert closing reflections, recipe notes, and any final connections to the text here.]</p>"}
+  ],
+  "aboutHtml": "<h2>About the Project</h2><p><strong>Cuisine of Desires</strong> is a website prototype created by <strong>Group 4</strong> for <strong>ENG 11</strong> as a creative response to Gabriela Lee's short story <em>Hunger</em>.</p><p>Our work takes the form of a satirical chocolate chip cookie recipe. Through its ingredients, procedures, and video tutorial, we explore different meanings of hunger and desire.</p><p><em>The website title, creative concept, and final wording are subject to group approval.</em></p><h2>Meet the Creators</h2><p class=\"placeholder\">[Add the names and roles of the group members here.]</p><h2>About the Literary Work</h2><p><strong>Text:</strong> <em>Hunger</em><br><strong>Author:</strong> Gabriela Lee</p><p class=\"placeholder\">[Add a short contextual description of the story and your group's creative interpretation.]</p><h2>Acknowledgments and Credits</h2><p class=\"placeholder\">[Add the original story citation, image and music credits, and production acknowledgments here.]</p>",
+  "source": "Notion starter draft, 2026-11-23"
+}

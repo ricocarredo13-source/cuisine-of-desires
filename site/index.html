@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090709">
+  <meta name="description" content="Cuisine of Desires — an ENG 11 creative response to Gabriela Lee's Hunger, presented as a satirical recipe.">
+  <title>Cuisine of Desires — A Recipe for Hunger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to recipe</a>
+  <header class="masthead" id="top">
+    <div class="masthead-inner">
+      <a href="#top" class="brand" id="brand-name">Cuisine of Desires</a>
+      <button type="button" class="menu-button" id="menu-open" aria-label="Open About the Project menu" aria-controls="about-drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="hero" role="img" aria-label="Close-up photograph of chocolate chip cookies in moody lighting"></div>
+  <main id="main">
+    <div class="page-shell">
+      <div class="intro-header">
+        <div class="eyebrow">THE RECIPE COLLECTION <span class="diamond">◆</span> NO. 01</div>
+        <h1 id="recipe-title">Chocolate Chip Cookie to Satisfy Your Hunger</h1>
+        <div class="byline" id="recipe-byline">By Group 4 <span class="byline-dot">•</span> November 23, 2026</div>
+        <div class="fancy-rule" aria-hidden="true"><i></i><span>✧</span><i></i></div>
+      </div>
+      <div class="mobile-jump">
+        <label for="section-select">Jump to section</label>
+        <select id="section-select" aria-label="Jump to a recipe section"></select>
+      </div>
+      <div class="reading-grid">
+        <div class="sections" id="sections" aria-live="polite">
+          <p class="loading-note">Opening the recipe book…</p>
+        </div>
+        <aside class="recipe-sidebar" aria-label="Recipe sections">
+          <nav class="sidebar-inner" aria-label="On this page">
+            <p class="toc-eyebrow">IN THIS RECIPE</p>
+            <div class="toc-links" id="desktop-nav"></div>
+            <div class="sidebar-ornament" aria-hidden="true">✦ <span>✦</span> ✦</div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><span id="footer-brand">Cuisine of Desires</span><span>An ENG 11 creative response to <cite>Hunger</cite> by Gabriela Lee</span><button type="button" id="footer-about">About the creators ↗</button></div></footer>
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="about-drawer" id="about-drawer" role="dialog" aria-modal="true" aria-labelledby="about-heading" aria-hidden="true" inert>
+    <div class="drawer-top"><span class="drawer-label">BEHIND THE RECIPE</span><button type="button" id="menu-close" class="close-button" aria-label="Close About menu">×</button></div>
+    <h2 id="about-heading">About Us<span class="blood-period">.</span></h2>
+    <div class="drawer-body" id="about-content"><p>Loading project details…</p></div>
+    <div class="drawer-bottom"><span>ENG 11 · GROUP 4</span><span>✦</span></div>
+  </aside>
+</body>
+</html>

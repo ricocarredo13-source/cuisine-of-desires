@@ -1,0 +1,51 @@
+name: Publish Notion content to Cuisine of Desires
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Export the current Notion page
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_PAGE_ID: ${{ vars.NOTION_PAGE_ID || '420486ee78e881e1bcb2d8bb046ee0b2' }}
+          NOTION_ABOUT_PAGE_ID: ${{ vars.NOTION_ABOUT_PAGE_ID || '420486ee78e881a5a994d1739df0bcfa' }}
+        run: python scripts/sync_notion.py
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

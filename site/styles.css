@@ -21,3 +21,74 @@
   .menu-button { width: 44px; height: 44px; gap: 3px; border-radius: 7px; }
   .menu-button span { width: 16px; height: 2px; }
 }
+
+/* 2026-11-23: Final editorial refinements requested by Group 4 */
+
+/* Title: one measured line on desktop, still responsive on narrower screens. */
+.intro-header { max-width: none; }
+.intro-header h1 {
+  max-width: none;
+  font-size: clamp(1.84rem, 2.72vw, 3.07rem);
+  line-height: 1.18;
+  letter-spacing: -.045em;
+}
+@media (min-width: 1151px) {
+  .intro-header h1 { white-space: nowrap; }
+}
+
+/* A centered divider spanning the available page width. */
+.fancy-rule {
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hide the automatic '01 / THE RECIPE' labels while retaining real H2s. */
+.section-number { display: none; }
+
+/* Legible, classic text with no decorative italic on ordinary paragraphs. */
+.section-body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #171415;
+  font-size: clamp(1.04rem, 1.16vw, 1.15rem);
+  font-style: normal;
+  line-height: 1.57;
+}
+.section-body p {
+  color: #171415;
+  font-style: normal;
+  margin: 0 0 .90em;
+}
+.section-body p em,
+.section-body p i { font-style: normal; color: inherit; }
+.section-body li { line-height: 1.57; }
+.section-body .placeholder { font-style: normal; }
+
+/* Give the main text more space and move the sticky nav farther right. */
+.reading-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(205px, 230px);
+  gap: clamp(26px, 3vw, 55px);
+}
+.recipe-section {
+  min-height: 36vh;
+  padding-bottom: 52px;
+  margin-bottom: 45px;
+}
+
+/* At tablet/mobile widths, readability wins over forced single-line type. */
+@media (max-width: 1150px) {
+  .intro-header h1 {
+    white-space: normal;
+    font-size: clamp(1.95rem, 3.15vw, 3.07rem);
+  }
+}
+@media (max-width: 860px) {
+  .reading-grid { display: block; }
+  .recipe-section { min-height: 0; }
+  .section-body { font-size: 1.06rem; }
+}
+@media (max-width: 530px) {
+  .intro-header h1 { font-size: clamp(1.98rem, 7.4vw, 2.55rem); }
+  .section-body { line-height: 1.6; }
+}

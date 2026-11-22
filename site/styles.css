@@ -4,20 +4,20 @@
 @media(max-width:530px){.masthead-inner{height:88px;padding-inline:21px}.brand{font-size:clamp(1.55rem,6.2vw,2.35rem)}.menu-button{height:44px;width:45px;gap:4px}.menu-button span{width:23px;height:2px}.hero{height:145px}.page-shell{padding:29px 20px 58px}.intro-header h1{font-size:clamp(2rem,8vw,2.6rem)}.byline{line-height:1.65}.fancy-rule{margin:25px 0 20px}.recipe-section{padding-bottom:40px;margin-bottom:42px}.recipe-section h2{font-size:1.85rem}.footer-inner{padding:32px 20px}.drawer-body{font-size:.97rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
-/* 2026-11-23: slimmer Cuisine of Desires masthead (-25% height) */
-.masthead-inner { height: 112px; }
-.brand { font-size: clamp(2.1rem, 3.65vw, 3.85rem); }
-.menu-button { width: 56px; height: 56px; gap: 6px; border-radius: 11px; }
-.menu-button span { width: 29px; height: 3px; }
+/* 2026-11-23: compact masthead — 80% scale of the prior header */
+.masthead-inner { height: 90px; }
+.brand { font-size: clamp(1.68rem, 2.92vw, 3.08rem); }
+.menu-button { width: 45px; height: 45px; gap: 5px; border-radius: 9px; border-width: 1.6px; }
+.menu-button span { width: 23px; height: 2.5px; }
 @media (max-width: 860px) {
-  .masthead-inner { height: 78px; }
-  .brand { font-size: clamp(1.6rem, 4.5vw, 2.7rem); }
-  .menu-button { width: 47px; height: 47px; gap: 5px; }
-  .menu-button span { width: 23px; height: 3px; }
+  .masthead-inner { height: 63px; }
+  .brand { font-size: clamp(1.28rem, 3.6vw, 2.16rem); }
+  .menu-button { width: 44px; height: 44px; gap: 4px; border-radius: 8px; }
+  .menu-button span { width: 19px; height: 2px; }
 }
 @media (max-width: 530px) {
-  .masthead-inner { height: 66px; }
-  .brand { font-size: clamp(1.4rem, 5.4vw, 1.9rem); }
-  .menu-button { width: 40px; height: 38px; gap: 4px; border-radius: 8px; }
-  .menu-button span { width: 20px; height: 2px; }
+  .masthead-inner { height: 55px; }
+  .brand { font-size: clamp(1.12rem, 4.32vw, 1.52rem); }
+  .menu-button { width: 44px; height: 44px; gap: 3px; border-radius: 7px; }
+  .menu-button span { width: 16px; height: 2px; }
 }

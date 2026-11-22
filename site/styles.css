@@ -3,3 +3,21 @@
 @media(max-width:860px){.masthead-inner{height:104px}.brand{font-size:clamp(1.8rem,5vw,3.3rem)}.menu-button{width:55px;height:55px;border-radius:11px;gap:6px}.menu-button span{width:25px;height:3px}.page-shell{padding-top:30px}.reading-grid{display:block}.recipe-sidebar{display:none}.mobile-jump{display:flex;position:sticky;z-index:20;top:0;align-items:center;gap:10px;background:rgba(251,249,246,.97);padding:12px 0;margin-bottom:26px;border-bottom:1px solid #d7c8cb;backdrop-filter:blur(10px)}.mobile-jump label{font-family:var(--sans);font-size:.7rem;letter-spacing:.03em;font-weight:700;white-space:nowrap;color:var(--blood)}.mobile-jump select{font-family:var(--serif);min-width:0;flex:1;border:1px solid #bca4ac;color:#511a30;border-radius:4px;padding:9px 12px;background:#fff;font-size:.94rem}.recipe-section{min-height:48vh;scroll-margin-top:93px}.footer-inner{flex-wrap:wrap}.hero{height:clamp(150px,21vw,205px)}}
 @media(max-width:530px){.masthead-inner{height:88px;padding-inline:21px}.brand{font-size:clamp(1.55rem,6.2vw,2.35rem)}.menu-button{height:44px;width:45px;gap:4px}.menu-button span{width:23px;height:2px}.hero{height:145px}.page-shell{padding:29px 20px 58px}.intro-header h1{font-size:clamp(2rem,8vw,2.6rem)}.byline{line-height:1.65}.fancy-rule{margin:25px 0 20px}.recipe-section{padding-bottom:40px;margin-bottom:42px}.recipe-section h2{font-size:1.85rem}.footer-inner{padding:32px 20px}.drawer-body{font-size:.97rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* 2026-11-23: slimmer Cuisine of Desires masthead (-25% height) */
+.masthead-inner { height: 112px; }
+.brand { font-size: clamp(2.1rem, 3.65vw, 3.85rem); }
+.menu-button { width: 56px; height: 56px; gap: 6px; border-radius: 11px; }
+.menu-button span { width: 29px; height: 3px; }
+@media (max-width: 860px) {
+  .masthead-inner { height: 78px; }
+  .brand { font-size: clamp(1.6rem, 4.5vw, 2.7rem); }
+  .menu-button { width: 47px; height: 47px; gap: 5px; }
+  .menu-button span { width: 23px; height: 3px; }
+}
+@media (max-width: 530px) {
+  .masthead-inner { height: 66px; }
+  .brand { font-size: clamp(1.4rem, 5.4vw, 1.9rem); }
+  .menu-button { width: 40px; height: 38px; gap: 4px; border-radius: 8px; }
+  .menu-button span { width: 20px; height: 2px; }
+}

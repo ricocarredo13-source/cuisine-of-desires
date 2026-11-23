@@ -137,6 +137,12 @@
       $('#footer-brand').textContent = content.brand;
       $('#recipe-title').textContent = content.title;
       $('#recipe-byline').textContent = content.byline;
+      // The short italic paragraph above the recipe's H1 in Notion is
+      // exported as `tagline`. Show it below the byline when provided.
+      const tagline = $('#recipe-tagline');
+      const taglineText = typeof content.tagline === 'string' ? content.tagline.trim() : '';
+      tagline.textContent = taglineText;
+      tagline.hidden = !taglineText;
       $('#about-content').innerHTML = content.aboutHtml || '<p>About the creators will be added here.</p>';
       sectionsRoot.textContent = '';
       content.sections.forEach(addSection);

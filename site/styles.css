@@ -94,11 +94,11 @@
 }
 
 
-/* 2026-11-23: Preserve side-by-side columns from Notion.
-   Wide desktop columns stack automatically on compact screens. */
+/* Notion column width_ratio values become CSS fractional grid tracks.
+   Unequal layouts are preserved on desktop, but columns stack on smaller screens. */
 .section-body .notion-columns {
   display: grid;
-  grid-template-columns: repeat(var(--notion-column-count, 2), minmax(0, 1fr));
+  grid-template-columns: var(--notion-column-widths, minmax(0, 1fr) minmax(0, 1fr));
   gap: 1.5rem clamp(1.25rem, 2.3vw, 2.5rem);
   align-items: start;
   width: 100%;
@@ -120,3 +120,34 @@
 @media (max-width: 1080px) {
   .section-body .notion-columns { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Optional website image sizing from Notion image caption, e.g. [[width=60%]].
+   Default Notion image blocks are left unchanged. A requested width is capped
+   at the available content width, centered, and maintains the image aspect ratio. */
+.section-body figure.notion-sized-image {
+  width: min(100%, var(--notion-image-width, 100%));
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-body figure.notion-sized-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Short description taken from the Notion paragraph before the recipe title. */
+.recipe-tagline {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(0.93rem, 1.1vw, 1.08rem);
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #6e4653;
+  margin: 11px 0 0;
+  max-width: 900px;
+}
+.recipe-tagline[hidden] { display: none; }

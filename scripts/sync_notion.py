@@ -160,6 +160,24 @@ def child_render(block: dict, depth: int = 0) -> str:
     t = block.get('type', '')
     data = block.get(t, {}) or {}
     rtext = rich_html(data.get('rich_text', []))
+
+    # A Notion column_list contains separate column blocks. Their children
+    # must remain in distinct wrappers rather than being flattened vertically.
+    if t == 'column_list':
+        columns = children(block['id']) if block.get('has_children') else []
+        rendered_columns = []
+        for column in columns:
+            if column.get('type') != 'column':
+                continue
+            column_blocks = children(column['id']) if column.get('has_children') else []
+            column_html = render_blocks(column_blocks, depth + 2)
+            rendered_columns.append(f'<div class="notion-column">{column_html}</div>')
+        if not rendered_columns:
+            return ''
+        count = len(rendered_columns)
+        return (f'<div class="notion-columns" style="--notion-column-count:{count}">'
+                + ''.join(rendered_columns) + '</div>')
+
     nested = ''
     if block.get('has_children') and t not in {'child_page','child_database','table'}:
         nested = render_blocks(children(block['id']), depth + 1)
